@@ -68,14 +68,22 @@ function getLast( array ) {
     return 'undefined';
   }
 }
-let fastFood = ['taco', 'burger', 'pizza']
-console.log(getLast(fastFood))
+
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
+let primaryColors = ['red', 'blue', 'yellow'];
 
+function findValue( value, array ){
+  for (let i=0; i<array.length; i++){
+    if(value===array[i]){
+      return true;
+    }
+  }
+  return false;
 }
+
+console.log(findValue('green', primaryColors))
 // ----------------------
 // Stretch Goals
 // ----------------------
