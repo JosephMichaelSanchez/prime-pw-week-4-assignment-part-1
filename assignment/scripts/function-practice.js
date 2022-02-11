@@ -106,18 +106,45 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 function sumAll(array) {
   let sum = 0
   for (let i=0; i<array.length; i++){
-    (sum += array[i])
+    (sum += array[i]);
   }
   return sum;
 }
-let someNumbers = [1, 2, 3]
-console.log(sumAll(someNumbers))
+let someNumbers = [1, 2, 3];
+console.log(sumAll(someNumbers));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
+function makePositive(array){
+  let newArray = []
+  for (let i=0; i<array.length; i++){
+    if (array[i]>0){
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}
+let randomNumbers = [(-3), 3, (-6), 6, (-9), 9]
+console.log(makePositive(randomNumbers));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+//Create a function that takes an array of numbers and returns an inverted array.
+//Examples: invertArray([1, 2, 3, 4, 5]) ➞ [-1, -2, -3, -4, -5]
+//          invertArray([1, -2, 3, -4, 5]) ➞ [-1, 2, -3, 4, -5]
+
+function invertArray(array){
+  let oppositeArray = []
+  for(i=0; i<array.length; i++){
+    let num = -(array[i]);
+      oppositeArray.push(num)
+    }
+  return oppositeArray;
+}
+let testArray = [7, 4, 7]
+console.log(invertArray(testArray));
+let flipThis = [-4, 8, 9, 8, -1]
+console.log(invertArray(flipThis));
