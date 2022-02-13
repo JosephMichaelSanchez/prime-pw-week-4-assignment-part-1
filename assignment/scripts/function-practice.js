@@ -15,10 +15,9 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return 'Hello, ' + name + '!';
-}
-//END FUNCTION
-console.log(helloName('Jake'))
+  return `Hello, ${name}!`;
+}//END OF FUNCTION
+console.log(helloName('Jake'));
 // Remember to call the function to test
 
 
@@ -26,17 +25,17 @@ console.log(helloName('Jake'))
 function addNumbers( firstNumber, secondNumber ) {
   return firstNumber + secondNumber;
   // return firstNumber + secondNumber;
-  }
-  //END FUNCTION
-  console.log(addNumbers(11,13))
+}//END OF FUNCTION
+
+console.log('Adding 11 and 13.', addNumbers(11,13));
 
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(numOne, numTwo, numThree ){
   return numOne * numTwo * numThree;
-}
-//END FUNCTION
-console.log(multiplyThree(7,8,9))
+}//END OF FUNCTION
+
+console.log('Multiplying 7, 8, and 9.', multiplyThree(7,8,9));
 
 
 // 5. Function that will return true if a number is positive,
@@ -48,8 +47,8 @@ function isPositive( number ) {
   else{
     return false;
   }
-}
-//END FUNCTION
+}//END OF FUNCTION
+
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -68,6 +67,12 @@ function getLast( array ) {
     return 'undefined';
   }
 }
+let sampleArray = [1, 2, 3, 4,];
+let blankArray = [];
+console.log(`sampleArray is: ${sampleArray}`);
+console.log('The final number in sampleArray is (should return 4):', getLast(sampleArray));
+console.log(`blankArray is: ${blankArray}`);
+console.log('The final number in blankArray is (should return undefined):', getLast(blankArray));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -82,8 +87,8 @@ function findValue( value, array ){
   }
   return false;
 }
-console.log(findValue('red', primaryColors))
-console.log(findValue('green', primaryColors))
+console.log('Looking for red, should return true.', findValue('red', primaryColors))
+console.log('Looking for green, should return false.', findValue('green', primaryColors))
 // ----------------------
 // Stretch Goals
 // ----------------------
@@ -111,7 +116,7 @@ function sumAll(array) {
   return sum;
 }
 let someNumbers = [1, 2, 3];
-console.log(sumAll(someNumbers));
+console.log('Adding 1, 2, and 3.', sumAll(someNumbers));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
@@ -123,9 +128,11 @@ function makePositive(array){
     }
   }
   return newArray;
-}
+}//END OF FUNCTION
+//Created a function
 let randomNumbers = [(-3), 3, (-6), 6, (-9), 9]
-console.log(makePositive(randomNumbers));
+console.log(`Array randomNumbers is: ${randomNumbers}`);
+console.log('Creating a new array of only the positive numbers from randomNumbers:', makePositive(randomNumbers));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
@@ -143,8 +150,10 @@ function invertArray(array){
       oppositeArray.push(num)
     }
   return oppositeArray;
-}
-let testArray = [7, 4, 7]
-console.log(invertArray(testArray));
-let flipThis = [-4, 8, 9, 8, -1]
-console.log(invertArray(flipThis));
+}//END OF FUNCTION
+let testArray = [7, 4, 7];
+console.log(`testArray is: ${testArray}`);
+console.log('Inverting the numbers in testArray:', invertArray(testArray));
+let flipThis = [-4, 8, 9, 8, -1];
+console.log(`flipThis is: ${flipThis}`);
+console.log('Inverting the numbers in flipThis:', invertArray(flipThis));
